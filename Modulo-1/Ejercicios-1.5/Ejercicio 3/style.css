@@ -1,0 +1,12 @@
+.header {
+  background-color: violet;
+  position: fixed;
+  z-index: 100;
+}
+
+.container {
+  width: 150px;
+  height: 10px;
+  position: relative;
+  top: 50px;
+}

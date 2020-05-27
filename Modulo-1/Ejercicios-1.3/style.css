@@ -1,0 +1,28 @@
+div {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+.horse {
+  height: 100%;
+  width: 100%;
+  /* Aparece justo debajo del párrafo, ocupando todo el contenedor*/
+}
+.dog {
+  height: 200%;
+  width: 200%;
+  /* Aparece justo debajo de la imagen anterior y encima del segundo párrafo. Es 2 veces el tamaño de la imagen anterior*/
+}
+.image {
+    height: 100%;
+    width: 100%;
+}
+.delfin {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 5px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}

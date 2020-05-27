@@ -1,0 +1,5 @@
+ul.item li {
+  list-style-type: none;
+  display: inline;
+  margin: 12px;
+}
