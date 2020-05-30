@@ -1,0 +1,8 @@
+.container {
+  max-width: 600px;
+}
+
+.item {
+  display: inline-block;
+  position: relative;
+}
