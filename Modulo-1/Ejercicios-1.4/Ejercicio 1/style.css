@@ -2,7 +2,7 @@
   width: 500px;
   height: 500px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
   background-color: antiquewhite;
@@ -10,8 +10,8 @@
 
 .item {
   box-sizing: border-box;
-  width: 500px;
-  height: 20px;
+  width: 20px;
+  height: 500px;
   border: 1px solid blue;
   background-color: pink;
 }
