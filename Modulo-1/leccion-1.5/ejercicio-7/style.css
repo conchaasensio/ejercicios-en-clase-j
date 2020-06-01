@@ -4,5 +4,7 @@
 
 .item {
   display: inline-block;
-  position: relative;
+  width: 86vh;
+  position: absolute;
+  left: 25%;
 }

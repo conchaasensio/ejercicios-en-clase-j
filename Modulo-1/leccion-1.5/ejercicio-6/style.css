@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: inline;
+  margin: 0;
+}
+
+.cookies {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: yellow;
+  text-align: center;
+  padding: 40px;
+}
