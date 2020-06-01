@@ -1,0 +1,99 @@
+/* body {
+  background-color: red;
+} */
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  --regular-weight: 300;
+  --bold-weight: 700;
+  --primary-color: #cc212a;
+  --light-color: white;
+  --dark-color: black;
+}
+
+body {
+  font-family: var(--primary-font); /* También pueden ir en el hashtag */
+  font-weight: var(--regular-weight);
+}
+
+h1 {
+  margin: 0; /* También puede ir en el hashtag inicial */
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* MAIN */
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-weight: var(--bold-weight);
+}
+
+.main-title span {
+  display: block;
+  text-align: center;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+}
+
+.footer-logo {
+  background-color: var(--primary-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: var(--light-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* También podría escribir translate(-25px, -25px) */
+}
+
+.footer .wrapper {
+  padding-top: 40px;
+}
+
+@media all and (min-width: 768px) {
+  .footer-logo {
+    position: static;
+    transform: none;
+  }
+
+  .footer .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 15px;
+    align-items: center;
+  }
+}
