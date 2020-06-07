@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <form action="/signup" method="post">
+      <label for="firstName">Nombre</label>
+      <input placeholder="Jon" id="firstName" type="text" name="firstName" />
+      <label for="lastName">Apellido</label>
+      <input placeholder="Nieve" id="lastName" type="text" name="lastName" />
+      <label for="emailAdress">E-Mail</label>
+      <input
+        placeholder="E-Mail"
+        id="emailAdress"
+        type="email"
+        name="emailAdress"
+      />
+      <label for="checkEmail">E-Mail</label>
+      <input
+        placeholder="Re-enter email"
+        id="checkEmail"
+        type="email"
+        name="emailAdress"
+      />
+      <label for="birthdayDate">Birthday</label>
+      <input
+        placeholder="Birthday"
+        id="birthdayDate"
+        type="date"
+        name="Birthday"
+      />
+      <label for="gender">
+        <input id="gender" type="radio" value="hombre" name="gender" />
+        Hombre
+      </label>
+      <label for="gender">
+        <input id="gender" type="radio" value="mujer" name="gender" />
+        Mujer
+      </label>
+      <input
+        type="hidden"
+        id="webBrowser"
+        name="webBrowser"
+        value="GoogleChrome"
+      />
+      <label for="height">Altura</label>
+      <input
+        placeholder="Altura en cm"
+        type="number"
+        id="height"
+        name="height"
+        min="50"
+        max="250"
+        value="150"
+      />
+      <label for="comments">Comentarios:</label>
+      <textarea
+        placeholder="Pon aquí tu comentario"
+        id="comments"
+        name="comments"
+        rows="8"
+        cols="80"
+      ></textarea>
+      <input
+        type="text"
+        id="legalTerms"
+        name="legalTerms"
+        value="Términos y Condiciones"
+        disabled
+      />
+      <input type="submit" value="Enviar info" />
+    </form>
+  </body>
+</html>
