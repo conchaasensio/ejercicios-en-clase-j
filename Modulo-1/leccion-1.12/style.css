@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+}
+
+.item {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: pink;
+  grid-column: span 12;
+}
+
+.menu {
+  background-color: rebeccapurple;
+  grid-column: span 4;
+}
+
+.content {
+  background-color: red;
+  grid-column: span 8;
+}
+
+.footer {
+  background-color: cyan;
+  grid-column: span 12;
+}

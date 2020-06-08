@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <form action="/signup" method="post">
+      <div>
+        <label>
+          Nombre
+          <input placeholder="Nombre" type="text" id="name" name="firstName" />
+          <input placeholder="Apellido" type="text" id="name" name="lastName" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Nombre de usuario
+          <input
+            placeholder="@gmail.com"
+            type="email"
+            id="email"
+            name="email"
+          />
+        </label>
+      </div>
+      <div>
+        <label
+          >Contraseña
+          <input type="password" id="password" name="password" />
+        </label>
+        <label
+          >Confirma tu contraseña
+          <input type="password" id="password" name="confirmPassword" />
+        </label>
+      </div>
+      <div>
+        <label
+          >Fecha de nacimiento
+          <input
+            placeholder="Día"
+            type="number"
+            id="day"
+            name="day"
+            min="1"
+            max="31"
+          />
+          <select id="month" name="month">
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+            <option value="Enero">Enero</option>
+          </select>
+          <input
+            placeholder="Año"
+            type="number"
+            id="year"
+            name="year"
+            min="1960"
+            max="2010"
+          />
+        </label>
+      </div>
+      <div>
+        <label
+          >Sexo
+          <select id="gender" name="gender">
+            <option value="Selecciona tu genero" disabled
+              >Selecciona tu genero</option
+            >
+            <option value="Mujer">Mujer</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Otros">Otros</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </body>
+</html>

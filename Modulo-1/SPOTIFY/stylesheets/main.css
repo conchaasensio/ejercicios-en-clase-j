@@ -113,6 +113,32 @@ html {
   height: 50vh;
 }
 
+/* OPTIONS */
+
+.options {
+  text-align: center;
+}
+
+.options-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.option-image img {
+  width: 100%;
+  max-width: 180px;
+}
+
+.option-image {
+  flex-shrink: 0;
+}
+
 @media all and (min-width: 768px) {
   .header-menu {
     display: block;
@@ -126,7 +152,25 @@ html {
     background: url("../images/premium_dancer.png") no-repeat;
     background-position: right top;
   }
+
+  .option {
+    width: 50%;
+  }
+
+  .options-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 @media all and (min-width: 1200px) {
+  .option {
+    width: 25%;
+    flex-direction: column;
+  }
+
+  .options-items {
+    text-align: center;
+  }
 }
