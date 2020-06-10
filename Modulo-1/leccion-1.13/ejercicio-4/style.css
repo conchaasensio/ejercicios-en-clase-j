@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.hi {
+  font-size: 50px;
+  color: aqua;
+  animation-name: intro;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes intro {
+  from {
+    transform: translate(0, 500px);
+    color: white;
+  }
+
+  to {
+    transform: translate(0, -100px);
+  }
+}
+  }
+}
