@@ -1,0 +1,13 @@
+input {
+  margin: 200px;
+}
+
+label {
+  transform: translate(205px, 202px);
+  position: absolute;
+}
+
+label:hover {
+  transform: translate(205px, 182px);
+  transition: all 0.5s ease-in-out;
+}

@@ -100,6 +100,15 @@ html {
 .header-menu li a {
   padding: 15px;
   font-weight: bold;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -ms-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.header-menu:hover {
+  color: var(--secondary-color);
 }
 
 .header-menu li:nth-child(3):after {
@@ -117,7 +126,40 @@ html {
   height: 50vh;
 }
 
+.title {
+  font-size: 3rem;
+}
+
+.title span {
+  display: block;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  min-width: 200px;
+  -webkit-transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -ms-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
 /* OPTIONS */
+
+.secondary-title {
+  font-size: 2rem;
+}
 
 .options {
   text-align: center;
@@ -176,6 +218,7 @@ html {
 
 .copy span {
   display: block;
+  text-align: right;
 }
 
 @media all and (min-width: 768px) {
@@ -191,6 +234,21 @@ html {
   .hero .wrapper {
     background: url("../images/premium_dancer.png") no-repeat;
     background-position: right top;
+    background-size: 50%;
+    animation-name: intro;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+  @keyframes intro {
+    from {
+      background-size: 60%;
+    }
+
+    to {
+      background-size: 50%;
+    }
   }
 
   .option {
@@ -206,6 +264,12 @@ html {
   .footer-menu li:last-child {
     display: inline;
     width: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (orientation: portrait) {
+  .hero-wrapper {
+    background-position: right-bottom;
   }
 }
 
