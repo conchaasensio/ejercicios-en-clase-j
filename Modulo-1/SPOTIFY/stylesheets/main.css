@@ -1,14 +1,6 @@
-.header,
-.main,
-.footer {
-  border: 1px solid red;
-}
-
 * {
   box-sizing: border-box;
   color: inherit;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 ul {
@@ -88,7 +80,7 @@ html {
   height: 20px;
 }
 .header-menu {
-  list-style: none;
+  list-style-type: none;
   padding: 0px;
   color: var(--light-color);
   display: none;
@@ -107,7 +99,7 @@ html {
   transition: color 1s ease;
 }
 
-.header-menu:hover {
+.header-menu li a:hover {
   color: var(--secondary-color);
 }
 
@@ -157,12 +149,12 @@ html {
 
 /* OPTIONS */
 
-.secondary-title {
-  font-size: 2rem;
-}
-
 .options {
   text-align: center;
+}
+
+.secondary-title {
+  font-size: 2rem;
 }
 
 .options-items {
@@ -172,17 +164,18 @@ html {
 
 .option {
   width: 100%;
+  text-align: left;
   display: flex;
   flex-direction: row;
+}
+
+.option-image {
+  flex-shrink: 0;
 }
 
 .option-image img {
   width: 100%;
   max-width: 180px;
-}
-
-.option-image {
-  flex-shrink: 0;
 }
 
 /* FOOTER */
@@ -224,7 +217,6 @@ html {
 @media all and (min-width: 768px) {
   .header-menu {
     display: block;
-    text-align: right;
   }
 
   .header-mobile-button {
@@ -251,35 +243,35 @@ html {
     }
   }
 
-  .option {
-    width: 50%;
-  }
-
   .options-items {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
+  .option {
+    width: 50%;
+  }
+
   .footer-menu li:last-child {
     display: inline;
-    width: auto;
   }
 }
 
 @media all and (min-width: 768px) and (orientation: portrait) {
-  .hero-wrapper {
-    background-position: right-bottom;
+  .hero .wrapper {
+    background-position: right bottom;
   }
 }
 
 @media all and (min-width: 1200px) {
+  .options-items {
+    text-align: center;
+  }
+
   .option {
     width: 25%;
     flex-direction: column;
-  }
-
-  .options-items {
     text-align: center;
   }
 }
