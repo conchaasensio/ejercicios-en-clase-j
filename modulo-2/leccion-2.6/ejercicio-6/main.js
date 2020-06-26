@@ -8,16 +8,19 @@ const pearBasket = {
   add: function (number) {
     this.currentNumberPears = this.currentNumberPears + number;
   },
-  increment: (number) => {
-    console.log(
-      (pearBasket.currentNumberPears = pearBasket.currentNumberPears + number)
-    );
+  decrease: function (number) {
+    this.currentNumberPears = this.currentNumberPears - number;
+  },
+  reset: function () {
+    this.currentNumberPears = this.initialNumberPears;
   },
 };
 
-pearBasket.increment(2);
+pearBasket.add(2);
+console.log(pearBasket.currentNumberPears);
 
-pearBasket.add(1);
+pearBasket.decrease(1);
+console.log(pearBasket.currentNumberPears);
 
-console.log(pearBasket.increment(1));
-console.log(pearBasket);
+pearBasket.reset();
+console.log(pearBasket.currentNumberPears);
