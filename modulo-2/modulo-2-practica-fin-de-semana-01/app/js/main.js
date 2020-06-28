@@ -23,11 +23,12 @@ function letEnter(name, password) {
     userPassword.value === userInfo.password
   ) {
     alert('Estás dentro');
-  } else if (attemps < 3) {
+  } else {
     errorMessage.classList.remove('hidden');
     attemps++;
-  } else {
-    console.log('Estás bloqueado');
+    if (attemps > 3) {
+      console.log('Estás bloqueado');
+    }
   }
 }
 //LISTENERS
