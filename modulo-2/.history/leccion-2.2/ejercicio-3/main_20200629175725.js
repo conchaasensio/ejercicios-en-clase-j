@@ -3,4 +3,4 @@ const pear = 2;
 const grape = 4;
 
 const totalPrice = kiwis + pear + grape;
-console.log(totalPrice + '€');
+console.log(totalPrice);
