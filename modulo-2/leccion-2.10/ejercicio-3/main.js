@@ -4,13 +4,13 @@ function getUserGitHub() {
   const input = document.querySelector('.js-username-input');
   fetch('https://api.github.com/users/' + input.value)
     .then((response) => response.json())
-    .then((data) => {
+    .then((profileData) => {
       const userName = document.querySelector('.js-name');
-      userName.innerHTML = data.login;
+      userName.innerHTML = profileData.login;
       const userImage = document.querySelector('.js-avatar');
-      userImage.src = data.avatar_url;
+      userImage.src = profileData.avatar_url;
       const repository = document.querySelector('.js-repository');
-      repository.innerHTML = data.public_repos;
+      repository.innerHTML = profileData.public_repos;
     });
 }
 
