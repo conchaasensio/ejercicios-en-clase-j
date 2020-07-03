@@ -11,6 +11,7 @@ function getUserGitHub() {
       userImage.src = data.avatar_url;
       const repository = document.querySelector('.js-repository');
       repository.innerHTML = data.public_repos;
+      console.log(data);
     });
 }
 
