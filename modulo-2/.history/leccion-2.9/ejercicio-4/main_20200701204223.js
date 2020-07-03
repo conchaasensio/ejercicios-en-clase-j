@@ -10,3 +10,9 @@ const tasks = [
   },
 ];
 
+function scratchCompletedTask() {
+  let completedTask = tasks;
+  tasks.classList.add('.scratch');
+  return completedTask;
+  console.log(completedTask);
+}

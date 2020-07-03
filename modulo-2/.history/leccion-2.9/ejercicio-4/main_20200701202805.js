@@ -10,3 +10,6 @@ const tasks = [
   },
 ];
 
+function scratchCompletedTask () {
+  tasks.name = 
+}

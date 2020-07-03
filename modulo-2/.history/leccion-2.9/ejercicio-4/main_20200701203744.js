@@ -10,3 +10,5 @@ const tasks = [
   },
 ];
 
+let unfinishedTask = tasks.name[3];
+console.log(unfinishedTask);

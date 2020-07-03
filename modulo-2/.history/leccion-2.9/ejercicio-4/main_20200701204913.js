@@ -10,3 +10,7 @@ const tasks = [
   },
 ];
 
+function scratchCompletedTask() {
+  const completedTask = document.querySelector('.js-task');
+  console.log(completedTask);
+}

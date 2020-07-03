@@ -8,5 +8,9 @@ const tasks = [
     name: 'Aprender cómo se realizan las peticiones al servidor en JavaScript',
     completed: false,
   },
+
+  let unfinishedTask = tasks.name[3];
+  console.log(unfinishedTask);
+
 ];
 

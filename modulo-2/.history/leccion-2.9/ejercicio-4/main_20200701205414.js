@@ -10,3 +10,11 @@ const tasks = [
   },
 ];
 
+let completedTask = document.querySelector('.js-task');
+
+function scratchCompletedTask() {
+  if (completedTask) {
+    completedTask.classList.add('scratch');
+    console.log(scratchCompletedTask();)
+  }
+}

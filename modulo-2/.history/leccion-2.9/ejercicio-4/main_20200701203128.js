@@ -10,3 +10,8 @@ const tasks = [
   },
 ];
 
+function scratchCompletedTask() {
+  let task = document.querySelector('.js-task');
+  task.classList.add('.scartch');
+  console.log(task);
+}
