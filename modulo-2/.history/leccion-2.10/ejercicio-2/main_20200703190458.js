@@ -1,7 +1,6 @@
 'use strict';
 
-/* Función genérica a la que hay que pasarle los parámetros url e imageAlt al ejecutarla. 
-De esta forma, evitamos código duplicado, al no tener que escribir 2 funciones que serían prácticamente iguales. */
+/* Función genérica a la que hay que pasarle los parámetros url e imageAlt al ejecutarla */
 
 function changeDogImage(url, imageAlt) {
   fetch(url)

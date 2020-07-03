@@ -1,7 +1,6 @@
 'use strict';
 
-/* Función genérica a la que hay que pasarle los parámetros url e imageAlt al ejecutarla. 
-De esta forma, evitamos código duplicado, al no tener que escribir 2 funciones que serían prácticamente iguales. */
+/* Función genérica a la que hay que pasarle los */
 
 function changeDogImage(url, imageAlt) {
   fetch(url)
@@ -13,14 +12,11 @@ function changeDogImage(url, imageAlt) {
     });
 }
 
-// Función para generar la imagen aleatoria de perretes. Ejecutamos la función genérica, pasándole los parámetros que nos interesan.
 function getDogImage() {
   changeDogImage('https://dog.ceo/api/breeds/image/random', 'Un perro');
 }
 const btn = document.querySelector('.js-dog');
 btn.addEventListener('click', getDogImage);
-
-// Hacemos lo mismo que en la función de perretes, pero ahora con los parámetros necesarios para qeu sólo salgan chihuahuas.
 
 function getChihuahua() {
   changeDogImage(
