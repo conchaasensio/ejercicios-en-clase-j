@@ -5,8 +5,12 @@ function get100Numbers() {
 
   for (let i = 0; i < 100; i++) {
     numbers.push(i + 1);
-    console.log(numbers[11]);
   }
 
   return numbers;
+}
+
+const numbers = get100Numbers();
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
 }

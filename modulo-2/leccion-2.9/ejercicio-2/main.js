@@ -10,4 +10,8 @@ function get100Numbers() {
   return numbers;
 }
 
-function getReverseNumbers() {}
+function getReversed100Numbers() {
+  return get100Numbers().reverse();
+}
+
+console.log(getReversed100Numbers());

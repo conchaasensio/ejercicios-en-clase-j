@@ -2,27 +2,27 @@
 
 const lostNumbers = [4, 8, 15, 16, 23, 42];
 
-function bestLostNumber() {
-  let evenLostNumbers = [];
-
+function even() {
+  let evenNumbers = [];
   for (let i = 0; i < lostNumbers.length; i++) {
-    if (lostNumbers[i] % 2 === 0) {
-      evenLostNumbers.push(lostNumbers[i]);
+    const element = lostNumbers[i];
+    if (element % 2 === 0) {
+      evenNumbers.push(element);
     }
   }
-
-  let multipleLostNumbers = [];
-
-  for (let i = 0; i < lostNumbers.length; i++) {
-    if (lostNumbers[i] % 3 === 0) {
-      multipleLostNumbers.push(lostNumbers[i]);
-      console.log(multipleLostNumbers);
-    }
-  }
-  const result = evenLostNumbers.concat(multipleLostNumbers);
-
-  return result;
+  return evenNumbers;
 }
 
-console.log(lostNumbers);
-console.log(bestLostNumber());
+function multipleOfThree() {
+  let multipleOfThreeNumbers = [];
+  for (let i = 0; i < lostNumbers.length; i++) {
+    const element = lostNumbers[i];
+    if (element % 3 === 0) {
+      multipleOfThreeNumbers.push(element);
+    }
+  }
+  return multipleOfThreeNumbers;
+}
+
+const numbers = even().concat(multipleOfThree());
+console.log(numbers);
