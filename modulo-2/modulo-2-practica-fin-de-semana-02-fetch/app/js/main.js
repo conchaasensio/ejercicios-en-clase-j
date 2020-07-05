@@ -13,6 +13,7 @@ fetch(ENDPOINT)
       let li = document.createElement('li');
       li.appendChild(document.createTextNode(princess.name));
       ul.appendChild(li);
+      li.addEventListener('click', changeBackground);
 
       let princessPicture = document.createElement('img');
       princessPicture.src = princess.picture;
@@ -24,6 +25,10 @@ fetch(ENDPOINT)
       li.appendChild(princessComment);
     }
   });
+
+function changeBackground(event) {
+  event.currentTarget.classList.add('selected');
+}
 
 let users = [];
 let favorites = [];
