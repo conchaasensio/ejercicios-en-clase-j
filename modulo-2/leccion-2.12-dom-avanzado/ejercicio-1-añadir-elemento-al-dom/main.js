@@ -1,6 +1,7 @@
 'use strict';
 
 const numbers = [1, 2, 3];
+const items = document.querySelector('.js-items-list');
 
 //Utilizo un bucle para crear un <li> por cada uno de los elementos que componen el array.
 for (const number of numbers) {
@@ -11,6 +12,5 @@ for (const number of numbers) {
   //Le añado el contenido al <li> mediante el método appendChild.
   newItem.appendChild(newContent);
   //Añado los elementos al DOM, incluyendo los <li> dentro del <ul> que ya existía en mi HTML.
-  const items = document.querySelector('.js-items');
   items.appendChild(newItem);
 }
