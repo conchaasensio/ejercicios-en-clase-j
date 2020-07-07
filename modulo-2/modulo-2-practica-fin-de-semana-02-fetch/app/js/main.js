@@ -27,7 +27,7 @@ fetch(ENDPOINT)
   });
 
 function changeBackground(event) {
-  event.currentTarget.classList.add('selected');
+  event.currentTarget.classList.toggle('selected');
 }
 
 let users = [];
