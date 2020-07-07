@@ -31,6 +31,14 @@ function handleChange(event) {
     userName.setAttribute('value', contactName1.name);
     userLastName.setAttribute('value', contactName1.lastName);
     userPhone.setAttribute('value', contactName1.phone);
+  } else if (event.currentTarget.value === '2') {
+    userName.setAttribute('value', contactName2.name);
+    userLastName.setAttribute('value', contactName2.lastName);
+    userPhone.setAttribute('value', contactName2.phone);
+  } else if (event.currentTarget.value === '3') {
+    userName.setAttribute('value', contactName3.name);
+    userLastName.setAttribute('value', contactName3.lastName);
+    userPhone.setAttribute('value', contactName3.phone);
   }
 }
 
