@@ -22,8 +22,8 @@ console.log(
   `El cuadrado 1 tiene un perímetro de ${mySquare1.perimeter()}cm y un área de ${mySquare1.area()}cm`
 );
 console.log(
-  `El cuadrado 1 tiene un perímetro de ${mySquare2.perimeter()}cm y un área de ${mySquare2.area()}cm`
+  `El cuadrado 2 tiene un perímetro de ${mySquare2.perimeter()}cm y un área de ${mySquare2.area()}cm`
 );
 console.log(
-  `El cuadrado 1 tiene un perímetro de ${mySquare3.perimeter()}cm y un área de ${mySquare3.area()}cm`
+  `El cuadrado 3 tiene un perímetro de ${mySquare3.perimeter()}cm y un área de ${mySquare3.area()}cm`
 );
