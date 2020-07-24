@@ -23,12 +23,6 @@ class Square extends Polygon {
     super(4, side, side);
     this.side = side;
   }
-  // perimeter() {
-  //   return this.side * 4;
-  // }
-  // area() {
-  //   return this.side * this.side;
-  // }
 }
 
 class Triangle extends Polygon {

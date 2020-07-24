@@ -1,19 +1,54 @@
 .App-logo {
-  height: 80px;
-  width: 80px;
+  height: 40vmin;
   pointer-events: none;
+}
+.profile-container {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+.img-profile {
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
 }
-
-.App-header {
-  min-height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 16px;
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 20px;
+}
+.info-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  background-color: white;
+  margin: auto;
 }
 
-.App-title {
-  display: block;
-  margin-left: 5px;
+.App {
+  background-color: grey;
+  padding: 20px 0 20px 0;
+  width: 400px;
+  margin: auto;
+}
+p {
+  margin: 0px;
+}
+
+.more {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.fa-heart {
+  color: red;
 }

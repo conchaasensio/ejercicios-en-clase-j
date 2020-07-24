@@ -1,16 +1,24 @@
 import React from 'react';
-import logo from './images/IMG_0026.jpg';
+import './images/IMG_0026.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h3 className="App-title">Bilbo</h3>
-        <p>Lunes 26 de junio de 2017</p>
-      </header>
-      <main>
+      <div className="profile-container">
+        <div className="img-profile">
+          <img
+            className="profile"
+            src="./images/IMG_0026.jpg"
+            alt="img-profile"
+          />
+        </div>
+        <div className="container-name">
+          <h1 className="name">Bilbo Asensio</h1>
+          <p>Viernes 17 de Julio de 2020</p>
+        </div>
+      </div>
+      <div className="info-container">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
           mattis vehicula tortor, sollicitudin maximus libero ultrices sit amet.
@@ -20,11 +28,13 @@ function App() {
           Integer pharetra convallis felis. Donec at justo non nunc finibus
           lobortis ut eu dolor.
         </p>
-        <p>Leer más...</p>
-        <p>
-          37 <i class="fas fa-heart"></i>
-        </p>
-      </main>
+        <div className="more">
+          <p>Leer más...</p>
+          <p>
+            37 <i className="fas fa-heart"></i>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
