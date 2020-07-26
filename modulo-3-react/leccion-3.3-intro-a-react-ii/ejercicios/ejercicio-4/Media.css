@@ -1,0 +1,19 @@
+.App-logo {
+  height: 80px;
+  width: 80px;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.App-header {
+  min-height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+.App-title {
+  display: block;
+  margin-left: 5px;
+}
