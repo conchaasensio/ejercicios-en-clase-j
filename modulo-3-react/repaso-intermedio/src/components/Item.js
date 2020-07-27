@@ -6,6 +6,10 @@ class Item extends React.Component {
       return <li key={index}>{member}</li>;
     });
 
+    //Cuando el icono es null.
+    const icon =
+      this.props.icon === null ? 'Icono por defecto' : this.props.icon;
+
     return (
       <article>
         <h2>{this.props.name}</h2>
@@ -16,6 +20,11 @@ class Item extends React.Component {
     );
   }
 }
+
+//Cuando no hay icono.
+Item.defaultProps = {
+  icon: 'Icono por defecto',
+};
 
 export default Item;
 
