@@ -1,0 +1,5 @@
+.card__preview {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid blue;
+}
