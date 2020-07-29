@@ -17,7 +17,11 @@ class App extends React.Component {
     const currentTarget = ev.currentTarget;
     const fieldNumber = parseInt(currentTarget.value);
     const filteredNumbers = numbers.filter((n) => n > fieldNumber);
-    this.setState({ numbers: filteredNumbers });
+    if (fieldNumber) {
+      this.setState({ numbers: filteredNumbers });
+    } else {
+      this.setState({ numbers: numbers });
+    }
   };
 
   isClicked = () => {
