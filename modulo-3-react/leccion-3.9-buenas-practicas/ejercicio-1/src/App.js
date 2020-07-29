@@ -6,21 +6,25 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numbersList: numbers.map((n) => <li key={n}>{n}</li>),
+      numbers: numbers,
     };
     this.filterNumbersList = this.filterNumbersList.bind(this);
+    this.isClicked = this.isClicked.bind(this);
   }
 
+  //Funciones manejadoras
   filterNumbersList = (ev) => {
     const currentTarget = ev.currentTarget;
     const fieldNumber = parseInt(currentTarget.value);
-    const filteredNumbers = numbers
-      .filter((n) => n > fieldNumber)
-      .map((n) => {
-        return <li key={n}>{n}</li>;
-      });
+    const filteredNumbers = numbers.filter((n) => n > fieldNumber);
+    this.setState({ numbers: filteredNumbers });
+  };
 
-    this.setState({ numbersList: filteredNumbers });
+  isClicked = () => {
+    const evenNumbers = numbers.filter((fieldNumber) => fieldNumber % 2 === 0);
+    this.setState({ numbers: evenNumbers });
+
+    return evenNumbers;
   };
 
   render() {
@@ -30,10 +34,13 @@ class App extends React.Component {
           <label htmlFor="">
             Escribe un número
             <input type="text" onChange={this.filterNumbersList} />
+            <input type="checkbox" onClick={this.isClicked} />
           </label>
         </form>
         <ul>
-          <li>{this.state.numbersList}</li>
+          {this.state.numbers.map((n) => (
+            <li key={n}>{n}</li>
+          ))}
         </ul>
       </div>
     );
