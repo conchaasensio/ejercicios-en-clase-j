@@ -20,9 +20,16 @@ class App extends React.Component {
     this.setState({ numbers: filteredNumbers });
   };
 
-  isClicked = () => {
+  isClicked = (ev) => {
     const evenNumbers = numbers.filter((fieldNumber) => fieldNumber % 2 === 0);
-    this.setState({ numbers: evenNumbers });
+    const currentTarget = ev.currentTarget;
+    const checkedBox = currentTarget.checked;
+
+    if (checkedBox) {
+      this.setState({ numbers: evenNumbers });
+    } else {
+      this.setState({ numbers: numbers });
+    }
 
     return evenNumbers;
   };
