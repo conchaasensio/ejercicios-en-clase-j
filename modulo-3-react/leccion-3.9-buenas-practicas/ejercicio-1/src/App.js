@@ -8,30 +8,36 @@ class App extends React.Component {
     this.state = {
       numbers: numbers,
     };
-    this.filterNumbersList = this.filterNumbersList.bind(this);
+    this.handleFilterNumbersList = this.handleFilterNumbersList.bind(this);
     this.isClicked = this.isClicked.bind(this);
+    this.inputNumber = React.createRef();
+    this.checkEvenNumbers = React.createRef();
   }
 
   //Funciones manejadoras
-  filterNumbersList = (ev) => {
-    const currentTarget = ev.currentTarget;
-    const fieldNumber = parseInt(currentTarget.value) || 0;
-    const filteredNumbers = numbers.filter((n) => n > fieldNumber);
+  handleFilterNumbersList = () => {
+    const filteredNumbers = this.filterNumbersList();
     this.setState({ numbers: filteredNumbers });
   };
 
-  isClicked = (ev) => {
-    const evenNumbers = numbers.filter((fieldNumber) => fieldNumber % 2 === 0);
-    const currentTarget = ev.currentTarget;
+  filterNumbersList() {
+    const inputValue = this.inputNumber.current.value;
+    const fieldNumber = parseInt(inputValue) || 0;
+    const greaterThanNumbers = numbers.filter((n) => n > fieldNumber);
+
+    const evenNumbers = greaterThanNumbers.filter(
+      (fieldNumber) => fieldNumber % 2 === 0
+    );
+    const currentTarget = this.checkEvenNumbers.current;
     const checkedBox = currentTarget.checked;
 
-    if (checkedBox) {
-      this.setState({ numbers: evenNumbers });
-    } else {
-      this.setState({ numbers: numbers });
-    }
+    return checkedBox ? evenNumbers : greaterThanNumbers;
+  }
 
-    return evenNumbers;
+  isClicked = () => {
+    let theNumbers = this.filterNumbersList();
+
+    this.setState({ numbers: theNumbers });
   };
 
   render() {
@@ -40,8 +46,16 @@ class App extends React.Component {
         <form action="">
           <label htmlFor="">
             Escribe un número
-            <input type="text" onChange={this.filterNumbersList} />
-            <input type="checkbox" onClick={this.isClicked} />
+            <input
+              type="text"
+              onChange={this.handleFilterNumbersList}
+              ref={this.inputNumber}
+            />
+            <input
+              type="checkbox"
+              onClick={this.isClicked}
+              ref={this.checkEvenNumbers}
+            />
           </label>
         </form>
         <ul>
