@@ -18,29 +18,10 @@ class App extends React.Component {
 
   //Funciones manejadoras
   handleFilterNumbersList = (ev) => {
-    //const filteredNumbers = this.filterNumbersList();
     this.setState({ filterNumber: ev.currentTarget.value });
   };
 
-  filterNumbersList() {
-    const inputValue = this.inputNumber.current.value;
-    const fieldNumber = parseInt(inputValue) || 0;
-    const greaterThanNumbers = this.state.numbers.filter(
-      (n) => n > fieldNumber
-    );
-
-    const evenNumbers = greaterThanNumbers.filter(
-      (fieldNumber) => fieldNumber % 2 === 0
-    );
-    const currentTarget = this.checkEvenNumbers.current;
-    const checkedBox = currentTarget.checked;
-
-    return checkedBox ? evenNumbers : greaterThanNumbers;
-  }
-
   isClicked = (ev) => {
-    //let theNumbers = this.filterNumbersList();
-
     this.setState({ isChecked: ev.currentTarget.checked });
   };
 
