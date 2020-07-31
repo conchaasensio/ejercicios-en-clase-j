@@ -1,7 +1,14 @@
 import React from 'react';
+import './App.css';
+import CollapsibleList from './CollapsibleList';
 
-function App() {
-  return <div className="App">Hola, mundo.</div>;
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <CollapsibleList />
+      </div>
+    );
+  }
 }
-
 export default App;
