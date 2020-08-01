@@ -17,6 +17,7 @@ class OnionHater extends React.Component {
       this.isHating = false;
       element.classList.remove('background');
     }
+    this.forceUpdate();
   };
 
   render() {
